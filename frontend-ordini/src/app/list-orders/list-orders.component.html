@@ -1,0 +1,32 @@
+<app-error-message></app-error-message>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Numero</th>
+      <th scope="col">Data</th>
+      <th scope="col">Nominativo</th>
+      <th scope="col">Totale</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let o of list">
+      <th>{{ o.numero }}</th>
+      <td>{{ o.dataOrdine }}</td>
+      <td>{{ o.cliente.nominativo }}</td>
+      <td>{{ o.totale }}</td>
+      <td>
+        <button type="button" class="btn btn-primary m-1">
+          <i class="fa fa-eye"></i>
+        </button>
+        <button type="button" class="btn btn-success m-1">
+          <i class="fa fa-edit"></i>
+        </button>
+        <button type="button" class="btn btn-danger m-1">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
